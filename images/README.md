@@ -1,1 +1,5 @@
 ![CryptidClubUML](https://github.com/dizzycake/Text_Based_Game/blob/main/images/Cryptid%20Club.png)
+
+![Nessie (1)](https://user-images.githubusercontent.com/80906139/116938467-10798200-ac28-11eb-8f0f-17dc9be48494.png)
+![MothMan (1)](https://user-images.githubusercontent.com/80906139/116938531-22f3bb80-ac28-11eb-95e4-2747cc4ff4f3.png)
+
