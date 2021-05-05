@@ -1,20 +1,30 @@
+#moth = loadImage("MothMan.png")
 
-class Mothman:
-  def __init__(self, name, age, image):
+#bigf = loadImage("")
+#yeti = loadImage("")
+
+class Characters:
+    #moth = loadImage("MothMan.png")
+    #nessie = loadImage("Nessie.png")
+    x = 0
+    y = 0
+
+def __init__(self, name, imageName , x, y):
     self.name = name
-    self.age = age
-    self.image = image
+    self.imageName = imageName
+    nessie = loadImage(imageName)
+    self.x = x
+    self.y = y
 
-p1 = Mothman("John", 36, 'graphic')
+def display( image, x, y):
+    image(nessie, 75, 75)
 
-print(p1.name)
-print(p1.age)
-print(p1.image)
+# MOTHMAN
 
-#MOTHMAN
 
-#NESSY
+# NESSY
+    #nessie = Characters(self, self.nessie, self.nessie, 75, 75)
 
-#BIGFOOT
+# BIGFOOT
 
-#YETI
+# YETI
