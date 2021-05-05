@@ -5,6 +5,8 @@
 
 from Locations import Locations
 locations1 = Locations()
+from Characters import Characters
+nessie = Characters("nessie","Nessie.png" 75, 75)
 
 
 def setup():
@@ -15,3 +17,4 @@ def draw():
     background(0)
     rect(300, 200, 100, 100)
     locations1.display()
+    nessie.display()
