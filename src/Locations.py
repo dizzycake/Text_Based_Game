@@ -1,32 +1,23 @@
-class Locations:
-    def __init__(self, location, PImage, x, y,):
-        self.location = location
-        self.PImage = image1.jpeg
-        self.x = 0
-        self.y = 0
-        
-    def display(int x, int y)
+class Locations(object):
+    image1 = loadImage("PImage0.png")
+    x = 0
+    y = 0
     
-campsite = Locations("Camp")
-forest = Locations("dfbhjfdhfds")
-PImage = Locations(x)
-x = Locations(0)
-y = Locations(0)
-print(campsite.location, forest.location)
+    def __init__(self):
+        x = 10
+        y = 10
+
+    def display(self):
+        image(self.image1, self.x, self.y)
+        point(self.x, self.y)
 
 
+# CAMPSITE
 
+# FOREST
 
+# LAKE
 
+# CAVE
 
-
-
-#CAMPSITE
-
-#FOREST
-
-#LAKE
-
-#CAVE
-
-#ROADSIDE
+# ROADSIDE
