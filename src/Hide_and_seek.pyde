@@ -3,6 +3,11 @@
 
 # TO DO LIST
 
+from Locations import Locations
+
+        
+        
+        
 def setup():
     size(700, 500)
     
