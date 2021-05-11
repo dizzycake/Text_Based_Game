@@ -9,7 +9,7 @@ from Characters import Characters
         
 def setup():
     size(700, 500)
-    global img, nessie, moth, bf, yeti
+    global img, img1, img2, img3, nessie, moth, bf, yeti, lamp, tank, photo, cocoa, snow
     
     # Characters 
     nessie = Characters("nessie","Nessie.png", 75, 75)
@@ -21,14 +21,33 @@ def setup():
     yeti = Characters("yeti","Yeti.png", 75, 75)
     img = loadImage('Yeti.png')
 
+    #Items/ Hiding places 
+    lamp = Items("lamp", "Lampost.png", 75, 75 )
+    l = loadImage('Lampost.png')
     
 def draw():
-    background(0)
-    rect(300, 200, 100, 100)
-    nessie.display(img)
-    #moth.display(img)
-    #bf.display(img)
-    #yeti.display(img)
+     background(55)
+    
+    #nessie.display(img)
+    #moth.display(img1)
+    #bf.display(img2)
+    #yeti.display(img3)
+    
+    lamp.display(item)
+    
+    
+    #chatBox 
+    strokeWeight(7)
+    stroke(235, 237, 236)
+    fill(0)
+    rect(0,480, 900, 220 )
+    
+    #InteractBox 
+    strokeWeight(7)
+    stroke(235, 237, 236)
+    fill(0)
+    rect(0,0,300,480)
+    
     
     
     
