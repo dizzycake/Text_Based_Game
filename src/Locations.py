@@ -2,22 +2,18 @@ class Locations(object):
     image1 = loadImage("PImage0.png")
     x = 0
     y = 0
-    
-    def __init__(self):
-        x = 10
-        y = 10
 
-    def display(self):
-        image(self.image1, self.x, self.y)
-        point(self.x, self.y)
+    def __init__(self, name, imageName, x, y):
+        self.name = name
+        self.imageName = imageName
+        Campsite = loadImage(imageName)
+        Roadside = loadImage(imageName)
+        Forest = loadImage(imageName)
+        Lake = loadImage(imageName)
+        
+        self.x = x
+        self.y = y
 
+    def display(self, img):
+        n = image(img, 75, 75)
 
-# CAMPSITE
-
-# FOREST
-
-# LAKE
-
-# CAVE
-
-# ROADSIDE
