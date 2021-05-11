@@ -20,6 +20,11 @@ def setup():
     img = loadImage('Big Foot.png')
     yeti = Characters("yeti","Yeti.png", 75, 75)
     img = loadImage('Yeti.png')
+        
+    Campsite = Locations("Campsite", "Campsite.png", 75, 75)
+    Roadside = Locations("Roadside", "Roadside.png", 75, 75)
+    Forest = Locations("Forest", "Forest.png", 75, 75)
+    Lake = Locations("Lake", "Lake.png", 75, 75)
 
     #Items/ Hiding places 
     lamp = Items("lamp", "Lampost.png", 75, 75 )
