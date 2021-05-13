@@ -3,6 +3,9 @@
 
 # TO DO LIST
 
+Answer1 = False
+NessieReaction1 = False
+
 #from Locations import Locations
 from Characters import Characters
 
@@ -48,6 +51,8 @@ def setup():
     
 def draw():
      background(55)
+     global Answer1, NessieReaction1
+
     
     #lamp.display(tem)
     #tank.display(tem1)
@@ -83,5 +88,34 @@ def draw():
     
     
     
+        
+        
+        
+        # Key pressed trials
+            textSize(32)
+    fill(120)
+    text("jfzsgjzfg", 100, 100)
+
+    if (Answer1):
+        textSize(50)
+        fill(120)
+        text("jfzsgjzfg", 100, 100)
+
+    if (NessieReaction1):
+        textSize(32)
+        fill(120)
+        text("yay! ajdshfhagdsfshagdfshdaf", 100, 550)
+
+def keyPressed():
+    global Answer1, NessieReaction1
+    if ((key == '1')):
+        Answer1 = True
+        NessieReaction1 = True
+        
+    if ((key == '1')):
+        Answer1 = True
+        NessieReaction1 = True
+        
+        
     
    
