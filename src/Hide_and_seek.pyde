@@ -86,9 +86,9 @@ def draw():
     fill(0)
     rect(0,0,300,480)
     
-    
-    
-        
+    #startScreen()
+    letter = loadImage("Letter.png")
+    image(letter, 0,0) 
         
         
         # Key pressed trials
