@@ -3,8 +3,14 @@
 
 # TO DO LIST
 
+#Needed fpr keypressed
 Answer1 = False
+Answer2 = False
+Answer3 = False
+
 NessieReaction1 = False
+NessieReaction2 = False
+NessieReaction3 = False
 
 #from Locations import Locations
 from Characters import Characters
@@ -51,7 +57,8 @@ def setup():
     
 def draw():
      background(55)
-     global Answer1, NessieReaction1
+     global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3
+
 
     
     #lamp.display(tem)
@@ -91,29 +98,65 @@ def draw():
     image(letter, 0,0) 
         
         
-        # Key pressed trials
-            textSize(32)
-    fill(120)
-    text("jfzsgjzfg", 100, 100)
-
     if (Answer1):
-        textSize(50)
+        textSize(28)
         fill(120)
-        text("jfzsgjzfg", 100, 100)
-
+        text("Press 1 for: Answer1", 12, 200)
+        
+    if (Answer2):
+        textSize(28)
+        fill(120)
+        text("Press 2 for: Answer2", 12, 240)
+        
+    if (Answer3):
+        textSize(28)
+        fill(120)
+        text("Press 3 for: Answer3", 12, 280)
+        
     if (NessieReaction1):
-        textSize(32)
+        textSize(28)
         fill(120)
-        text("yay! ajdshfhagdsfshagdfshdaf", 100, 550)
+        text("yay! Text option 1", 14, 550)
+        
+    if (NessieReaction2):
+        textSize(28)
+        fill(120)
+        text("yay! Text option 1", 14, 550)
+        
+    if (NessieReaction3):
+        textSize(28)
+        fill(120)
+        text("yay! Text option 1", 14, 550)
+        
+        
 
 def keyPressed():
-    global Answer1, NessieReaction1
+    global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3
+    
+                                 #MOTHMAN
+if ((key == 'a')):
+        Answer1 = True
+        Answer2 = True
+        Answer3 = True
+
+    
+    #answer1
     if ((key == '1')):
         Answer1 = True
+        Answer2 = False
+        Answer3 = False
         NessieReaction1 = True
-        
-    if ((key == '1')):
-        Answer1 = True
+    #answer2
+    if ((key == '2')):
+        Answer2 = True
+        Answer1 = False
+        Answer3 = False
+        NessieReaction1 = True
+   #answer3 
+    if ((key == '3')):
+        Answer3 = True
+        Answer2 = False
+        Answer1 = False
         NessieReaction1 = True
         
         
