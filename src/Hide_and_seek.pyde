@@ -4,13 +4,42 @@
 # TO DO LIST
 
 #Needed fpr keypressed
-Answer1 = False
-Answer2 = False
-Answer3 = False
+NessieQuestion = False
+    MothmanQuestion = False
+    BigfootQuestion = False
+    YetiQuestion = False
 
-NessieReaction1 = False
-NessieReaction2 = False
-NessieReaction3 = False
+    NAnswer1 = False
+    NAnswer2 = False
+    NAnswer3 = False
+
+    MAnswer1 = False
+    MAnswer2 = False
+    MAnswer3 = False
+
+    BAnswer1 = False
+    BAnswer2 = False
+    BAnswer3 = False
+
+    YAnswer1 = False
+    YAnswer2 = False
+    YAnswer3 = False
+
+    NReaction1 = False
+    NReaction2 = False
+    NReaction3 = False
+
+    MReaction1 = False
+    MReaction2 = False
+    MReaction3 = False
+    
+    BReaction1 = False
+    BReaction2 = False
+    BReaction3 = False
+
+    YReaction1 = False
+    YReaction2 = False
+    YReaction3 = False
 
 #from Locations import Locations
 from Characters import Characters
@@ -58,9 +87,57 @@ def setup():
     loc4 = loadImage('Roadside.png')
     
 def draw():
-     background(55)
-     global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3
+    background(55)
+    nessie.display(img)
+    global NessieQuestion, NAnswer1, NAnswer2, NAnswer3, NReaction1, NReaction2, NReaction3 
+    # chatBox
+    strokeWeight(7)
+    stroke(235, 237, 236)
+    fill(0)
+    rect(0, 480, 900, 220)
 
+    # interact box
+    strokeWeight(7)
+    stroke(235, 237, 236)
+    fill(0)
+    rect(0, 0, 300, 480)
+            
+    if (NessieQuestion):
+        textSize(32)
+        fill(120)
+        text("Question1", 80, 90)
+        textSize(28)
+        text("Press a for answers", 23, 150)
+        
+    if (NAnswer1):
+        textSize(28)
+        fill(120)
+        text("Press 1 for: Answer1", 12, 200)
+        
+    if (NAnswer2):
+        textSize(28)
+        fill(120)
+        text("Press 2 for: Answer2", 12, 240)
+        
+    if (NAnswer3):
+        textSize(28)
+        fill(120)
+        text("Press 3 for: Answer3", 12, 280)
+        
+    if (NReaction1):
+        textSize(28)
+        fill(120)
+        text("yay! Text option 1", 14, 550)
+        
+    if (NReaction2):
+        textSize(28)
+        fill(120)
+        text("yay! Text option 1", 14, 550)
+        
+    if (NReaction3):
+        textSize(28)
+        fill(120)
+        text("yay! Text option 1", 14, 550)
 
     
     #lamp.display(tem)
@@ -99,67 +176,39 @@ def draw():
     letter = loadImage("Letter.png")
     image(letter, 0,0) 
         
+ 
         
-    if (Answer1):
-        textSize(28)
-        fill(120)
-        text("Press 1 for: Answer1", 12, 200)
-        
-    if (Answer2):
-        textSize(28)
-        fill(120)
-        text("Press 2 for: Answer2", 12, 240)
-        
-    if (Answer3):
-        textSize(28)
-        fill(120)
-        text("Press 3 for: Answer3", 12, 280)
-        
-    if (NessieReaction1):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
-    if (NessieReaction2):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
-    if (NessieReaction3):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
-        
-
 def keyPressed():
-    global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3
+    global NessieQuestion, NAnswer1, NAnswer2, NAnswer3, NReaction1, NReaction2, NReaction3 
     
-                                 #MOTHMAN
-if ((key == 'a')):
-        Answer1 = True
-        Answer2 = True
-        Answer3 = True
+# NESSIE
 
-    
-    #answer1
+    if ((key == 'q')):
+        NessieQuestion = True
+        
+    if ((key == 'a')):
+        NAnswer1 = True
+        NAnswer2 = True
+        NAnswer3 = True
+
+    # answer1
     if ((key == '1')):
-        Answer1 = True
-        Answer2 = False
-        Answer3 = False
-        NessieReaction1 = True
-    #answer2
+        NAnswer1 = True
+        NAnswer2 = False
+        NAnswer3 = False
+        NReaction1 = True
+    # answer2
     if ((key == '2')):
-        Answer2 = True
-        Answer1 = False
-        Answer3 = False
-        NessieReaction1 = True
-   #answer3 
+        NAnswer2 = True
+        NAnswer1 = False
+        NAnswer3 = False
+        NReaction1 = True
+   # answer3 
     if ((key == '3')):
-        Answer3 = True
-        Answer2 = False
-        Answer1 = False
-        NessieReaction1 = True
+        NAnswer3 = True
+        NAnswer2 = False
+        NAnswer1 = False
+        NReaction1 = True
         
         
     
