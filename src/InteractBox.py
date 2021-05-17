@@ -1,6 +1,5 @@
 class Interact(object):
     
-    
     NessieQuestion = False
     MothmanQuestion = False
     BigfootQuestion = False
