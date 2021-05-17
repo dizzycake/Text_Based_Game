@@ -1,11 +1,11 @@
 class Chatbox:
-  def __init__(self, name, age, image):
-    self.name = name
-    self.age = age
-    self.image = image
-
-p1 = Chatbox("John", 36, 'graphic')
-
-print(p1.name)
-print(p1.age)
-print(p1.image)
+  def __init__(self, hi, book, read):
+    self.name = hi
+    self.age = book
+    self.image = read
+    
+  def draw(): 
+    pass
+  
+  def keyTyped(1, 2, 3):
+    
