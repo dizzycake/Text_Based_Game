@@ -3,6 +3,7 @@ class Interact(object):
     #NOTE: Checkout how to rewrite this using same logic as strtscreen
     #Use gdshfgdas = "jhgsfjhgds" instead of if statements
     
+    #Also this class is a place holder and npthing runs when in here
     NessieQuestion = False
     MothmanQuestion = False
     BigfootQuestion = False
