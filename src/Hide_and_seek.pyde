@@ -14,6 +14,8 @@ NessieReaction3 = False
 
 #from Locations import Locations
 from Characters import Characters
+from Locations import Locs
+from Items import Item
 
         
 def setup():
