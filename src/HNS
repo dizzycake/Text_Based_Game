@@ -92,6 +92,8 @@ def draw():
             camp.display(loc)
 
 
+#https://www.delftstack.com/howto/python/python-detect-keypress/
+
 
 
     
