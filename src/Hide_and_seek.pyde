@@ -107,6 +107,12 @@ def draw():
     stroke(235, 237, 236)
     fill(0)
     rect(0, 0, 300, 480)
+    
+    
+    fill(200)
+    Help = text("Press 'cmd' for key guide", 10,470)
+    
+   # KeyGuide = text("")
             
     if (NessieQuestion):
         textSize(32)
@@ -144,8 +150,8 @@ def draw():
         textSize(28)
         fill(120)
         text("yay! Text option 1", 14, 550)
-
-    
+        
+ 
     #lamp.display(tem)
     #tank.display(tem1)
     #photo.display(tem2)
