@@ -165,18 +165,7 @@ def draw():
     
     #blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
     
-    
-    #chatBox 
-    strokeWeight(7)
-    stroke(235, 237, 236)
-    fill(0)
-    rect(0,480, 900, 220 )
-    
-    #InteractBox 
-    strokeWeight(7)
-    stroke(235, 237, 236)
-    fill(0)
-    rect(0,0,300,480)
+  
     
     def startScreen()
         letter = loadImage("Letter.png")
