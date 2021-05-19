@@ -186,6 +186,15 @@ def keyPressed():
     
 # NESSIE
 
+    if ((key == 'u')):
+        NessieQuestion = False
+        NAnswer1 = False
+        NAnswer2 = False
+        NAnswer3 = False
+        NReaction1 = False
+        NReaction2 = False
+        NReaction3 = False
+    
     if ((key == 'q')):
         NessieQuestion = True
         
@@ -205,14 +214,10 @@ def keyPressed():
         NAnswer2 = True
         NAnswer1 = False
         NAnswer3 = False
-        NReaction1 = True
+        NReaction2 = True
    # answer3 
     if ((key == '3')):
         NAnswer3 = True
         NAnswer2 = False
         NAnswer1 = False
-        NReaction1 = True
-        
-        
-    
-   
+        NReaction3 = True
