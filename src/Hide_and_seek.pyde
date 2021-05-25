@@ -113,17 +113,30 @@ def draw():
     
    # KeyGuide = text("")
     
-    if (Start):
-        letter = loadImage("Letter.png")
-        image(letter, 0, 0)
-        fill(235, 237, 236)
-        text("Dear Jack, ", 10, 300)
-        start = "We have invited you to join the Cryptid Book Club! Meet all the other members at the Curious Campgrounds to join us, and make sure to bring some good books!";
-        text(start, 20, 315, 280, 400)
-        instruct = "- Sincerly, CBC Cryptids"
-        text(instruct, 20, 390, 280, 420)
-        instruct = "Use the 1, 2, & 3 keys to ineract and the arrow keys to switch locations. Click the 's' key to begin"
-        text(instruct, 20, 420, 280, 420)
+   def startScreen():
+            play == False
+            # InteractBox 
+            strokeWeight(7)
+            stroke(235, 237, 236)
+            fill(0)
+            rect(0,0,300,480)
+
+            letter = loadImage("Letter.png")
+            image(letter, 0, 0)
+            fill(235, 237, 236)
+            text("Dear Jack, ", 10, 300)
+            start = "We have invited you to join the Cryptid Book Club! Meet all the other members at the Curious Campgrounds to join us, and make sure to bring some good books!";
+            text(start, 20, 315, 280, 400)
+            instruct = "- Sincerly, CBC Cryptids"
+            text(instruct, 20, 390, 280, 420)
+            instruct = "Use the 1, 2, & 3 keys to ineract and the arrow keys to switch locations. Click the right arrow to begin"
+            text(instruct, 20, 420, 280, 420)
+            
+            # chatBox 
+            strokeWeight(7)
+            stroke(235, 237, 236)
+            fill(0)
+            rect(0, 480, 920, 240 )
             
     if (NessieQuestion):
         textSize(32)
