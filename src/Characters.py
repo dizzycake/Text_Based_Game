@@ -11,5 +11,4 @@ class Characters:
         self.y = y
 
     def display(self, img):
-       n = image(img, 400, 120)
-       
+       n = image(img, 400, 50)
