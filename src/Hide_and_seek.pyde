@@ -70,7 +70,7 @@ def draw():
             text(start, 20, 315, 280, 400)
             instruct = "- Sincerly, CBC Cryptids"
             text(instruct, 20, 390, 280, 420)
-            instruct = "Use the 1, 2, & 3 keys to ineract and c, l, f, v keys to switch locations. Click the right arrow to begin"
+            instruct = "Use the 1, 2, & 3 keys to ineract and C, L, F, V keys to switch locations. Click C to begin"
             text(instruct, 20, 420, 280, 420)
             
             # chatBox 
@@ -143,8 +143,4 @@ def draw():
                 text(""" Hello Jackie-Jackalope, what brings you 
                 to my pond?""", 10, 120)
     
-    
-
-
-
-   
+         
