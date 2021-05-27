@@ -1,57 +1,18 @@
 # Hide And Seek - Text Based Game
-# by Joanqna Bromka and Kate Nelson | 2021 Programming I
-Start = True
-Guide = False
-NessieQuestion = False
-MothmanQuestion = False
+# by Joanna Bromka and Kate Nelson | 2021 Programming I
 
-BigfootQuestion = False
-YetiQuestion = False
 
-NAnswer1 = False
-NAnswer2 = False
-NAnswer3 = False
-
-MAnswer1 = False
-MAnswer2 = False
-MAnswer3 = False
-
-BAnswer1 = False
-BAnswer2 = False
-BAnswer3 = False
-
-YAnswer1 = False
-YAnswer2 = False
-YAnswer3 = False
-
-NReaction1 = False
-NReaction2 = False
-NReaction3 = False
-
-MReaction1 = False
-MReaction2 = False
-MReaction3 = False
-
-BReaction1 = False
-BReaction2 = False
-BReaction3 = False
-
-YReaction1 = False
-YReaction2 = False
-YReaction3 = False
-
+# from Locations import Locations
 from Characters import Characters
-from Locations import Locs
 from Items import Item
-from InteractBox import Interact
-
+from Locations import Locs
 
 
 def setup():
     size(900, 700)
     global img, img1, img2, img3, nessie, moth, bf, yeti, camp, forest, lake, cave, road, loc, loc1, loc2, loc3, loc4
-    global lamp, tank, photo, snow, cocoa, tem, tem1, tem2, tem3, tem4, letter
-     
+    global lamp, tank, photo, snow, cocoa, tem, tem1, tem2, tem3, tem4, letter, play
+    
     # Characters
     nessie = Characters("nessie", "Nessie.png", 75, 75)
     img = loadImage('Nessie.png')
@@ -85,35 +46,15 @@ def setup():
     loc3 = loadImage('Cave.png')
     road = Locs("road", "Roadside.png", 75, 75)
     loc4 = loadImage('Roadside.png')
-
-
+    
+    play = False
+    
 def draw():
-    global Letter, Guide, NessieQuestion, NAnswer1, NAnswer2, NAnswer3, NReaction1, NReaction2, NReaction3 
     background(55)
-    lake.display(img)
-    
-    strokeWeight(7)
-    stroke(235, 237, 236)
-    fill(0)
-    rect(0, 480, 900, 220)
+    global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3, play
+    text("Click S to begin . . . ", 200, 500)
 
-    # interact box
-    strokeWeight(7)
-    stroke(235, 237, 236)
-    fill(0)
-    rect(0, 0, 300, 480)
-    
-    fill(200)
-    textSize(20)
-    Help = text("Press 'h' for key guide", 10,470)
-    if (Guide):
-        textSize(20)
-        text("To pull up questions press 'q'", 20, 500)
-        text("oop", 30, 520)
-    
-   # KeyGuide = text("")
-    
-   def startScreen():
+    def startScreen():
             play == False
             # InteractBox 
             strokeWeight(7)
@@ -129,7 +70,7 @@ def draw():
             text(start, 20, 315, 280, 400)
             instruct = "- Sincerly, CBC Cryptids"
             text(instruct, 20, 390, 280, 420)
-            instruct = "Use the 1, 2, & 3 keys to ineract and the arrow keys to switch locations. Click the right arrow to begin"
+            instruct = "Use the 1, 2, & 3 keys to ineract and c, l, f, v keys to switch locations. Click the right arrow to begin"
             text(instruct, 20, 420, 280, 420)
             
             # chatBox 
@@ -138,115 +79,72 @@ def draw():
             fill(0)
             rect(0, 480, 920, 240 )
             
-    if (NessieQuestion):
-        textSize(32)
-        fill(120)
-        text("Question1", 80, 90)
-        textSize(28)
-        text("Press a for answers", 23, 150)
-        
-    if (NAnswer1):
-        textSize(28)
-        fill(120)
-        text("Press 1 for: Answer1", 12, 200)
-        
-    if (NAnswer2):
-        textSize(28)
-        fill(120)
-        text("Press 2 for: Answer2", 12, 240)
-        
-    if (NAnswer3):
-        textSize(28)
-        fill(120)
-        text("Press 3 for: Answer3", 12, 280)
-        
-    if (NReaction1):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
-    if (NReaction2):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
-    if (NReaction3):
-        textSize(28)
-        fill(120)
-        text("yay! Text option 1", 14, 550)
-        
- 
-    #lamp.display(tem)
-    #tank.display(tem1)
-    #photo.display(tem2)
-    #snow.display(tem3)
-    #cocoa.display(tem4)
-    
-    #camp.display(loc)
-    #lake.display(loc2)
-    #forest.display(loc1)
-    #cave.display(loc3)
-    #road.display(loc4)
-    
-    #nessie.display(img)
-    #moth.display(img1)
-    #bf.display(img2)
-    #yeti.display(img3)
-            
-         
-def keyPressed():
-    global Start, Guide, NessieQuestion, NAnswer1, NAnswer2, NAnswer3, NReaction1, NReaction2, NReaction3 
-    
-# NESSIE
+    def boxes():
+        # InteractBox 
+            strokeWeight(7)
+            stroke(235, 237, 236)
+            fill(0)
+            rect(0,0,320,480)
+        # chatBox 
+            strokeWeight(7)
+            stroke(235, 237, 236)
+            fill(0)
+            rect(0, 480, 930, 240 )
 
+
+
+    
     if ((key == 's')):
-        Start = False
-
-    if ((key == 'u')):
-        NessieQuestion = False
-        NAnswer1 = False
-        NAnswer2 = False
-        NAnswer3 = False
-        NReaction1 = False
-        NReaction2 = False
-        NReaction3 = False
+        play = False
+        startScreen()
+        play = True
+        
+    if ((key == 'c')):
+        boxes()
+        camp.display(loc)
+        fill(235, 237, 236)
+        text("Hmm, nothing seems to be here, lets try somewhere else ...", 20, 530)
+        
+    if ((key == 'v')):
+        boxes()
+        cave.display(loc3)
+        fill(235, 237, 236)
+        bf.display(img2)
+        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+        
+    if ((key == 'f')):
+        boxes()
+        forest.display(loc1)
+        moth.display(img1)
+        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+        
+    if ((key == 'l')):
+        boxes()
+        lake.display(loc2)
+        nessie.display(img)
+        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+        fill(235, 237, 236)
+        textSize(14)
+        text("""
+             Key 1: Hi!
+             Key 2: Do you know about the bookclub here?
+             Key 3: What are you reading?
+             
+             """, 10, 500)
+        while ((key == 'l')): 
+           
+            if((key == '1')):
+                boxes()
+                lake.display(loc2)
+                nessie.display(img)
+                blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+                textSize(14)
+                fill(235, 237, 236)
+                text(""" Hello Jackie-Jackalope, what brings you 
+                to my pond?""", 10, 120)
     
-    if ((key == 'q')):
-        NessieQuestion = True
-        Guide = False
-        
-    if ((key == 'a')):
-        NAnswer1 = True
-        NAnswer2 = True
-        NAnswer3 = True
-        Guide = False
+    
 
-    # answer1
-    if ((key == '1')):
-        NAnswer1 = True
-        NAnswer2 = False
-        NAnswer3 = False
-        NReaction1 = True
-        Guide = False
-    # answer2
-    if ((key == '2')):
-        NAnswer2 = True
-        NAnswer1 = False
-        NAnswer3 = False
-        NReaction2 = True
-        Guide = False
-   # answer3 
-    if ((key == '3')):
-        NAnswer3 = True
-        NAnswer2 = False
-        NAnswer1 = False
-        NReaction3 = True
-        Guide = False
 
-    if ((key == 'h')):
-        Guide = True
 
-#BIGFOOT
-
-        
-# YETI
+   
