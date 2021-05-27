@@ -11,7 +11,7 @@ from Locations import Locs
 def setup():
     size(900, 700)
     global img, img1, img2, img3, nessie, moth, bf, yeti, camp, forest, lake, cave, road, loc, loc1, loc2, loc3, loc4
-    global lamp, tank, photo, snow, cocoa, tem, tem1, tem2, tem3, tem4, letter, play
+    global lamp, tank, photo, snow, cocoa, tem, tem1, tem2, tem3, tem4, letter, play, screen
     
     # Characters
     nessie = Characters("nessie", "Nessie.png", 75, 75)
@@ -48,11 +48,15 @@ def setup():
     loc4 = loadImage('Roadside.png')
     
     play = False
+    screen = 0
     
 def draw():
-    background(55)
+    background(20)
     global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3, play
+    textSize(20)
     text("Click S to begin . . . ", 200, 500)
+    
+    textSize(12.5)
 
     
     def startScreen():
@@ -72,7 +76,7 @@ def draw():
             instruct = "- Sincerly, CBC Cryptids"
             text(instruct, 20, 390, 280, 420)
             instruct = "Use the 1, 2, & 3 keys to ineract and C, L, F, V keys to switch locations. Click C to begin"
-            text(instruct, 20, 420, 280, 420)
+            text(instruct, 17, 420, 280, 420)
             
             # chatBox 
             strokeWeight(7)
