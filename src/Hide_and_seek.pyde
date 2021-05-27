@@ -54,6 +54,7 @@ def draw():
     global Answer1, Answer2, Answer3, NessieReaction1, NessieReaction2, NessieReaction3, play
     text("Click S to begin . . . ", 200, 500)
 
+    
     def startScreen():
             play == False
             # InteractBox 
@@ -90,38 +91,38 @@ def draw():
             stroke(235, 237, 236)
             fill(0)
             rect(0, 480, 930, 240 )
-
-
+            
 
     
     if ((key == 's')):
         play = False
         startScreen()
         play = True
-        
+
     if ((key == 'c')):
-        boxes()
         camp.display(loc)
+        boxes()
         fill(235, 237, 236)
         text("Hmm, nothing seems to be here, lets try somewhere else ...", 20, 530)
-        
+        text("  (Press 'v' to move to the next location)", 20, 550)
+
     if ((key == 'v')):
-        boxes()
         cave.display(loc3)
         fill(235, 237, 236)
         bf.display(img2)
-        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        
-    if ((key == 'f')):
         boxes()
+        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+
+    if ((key == 'f')):
         forest.display(loc1)
         moth.display(img1)
-        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        
-    if ((key == 'l')):
         boxes()
+        blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
+
+    if ((key == 'l')):
         lake.display(loc2)
         nessie.display(img)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
         fill(235, 237, 236)
         textSize(14)
