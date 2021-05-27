@@ -115,12 +115,16 @@ def draw():
         fill(235, 237, 236)
         bf.display(img2)
         boxes()
+        fill(255)
+        text("  (Press 'f' to move to the next location)", 20, 550)
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
 
     if ((key == 'f')):
         forest.display(loc1)
         moth.display(img1)
         boxes()
+        fill(255)
+        text("  (Press 'l' to move to the next location)", 20, 550)
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
 
     if ((key == 'l')):
@@ -136,6 +140,8 @@ def draw():
              Key 3: What are you reading?
              
              """, 10, 500)
+        fill(255)
+        
         while ((key == 'l')): 
            
             if((key == '1')):
