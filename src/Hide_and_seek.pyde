@@ -52,6 +52,8 @@ def setup():
    
 def draw():
     background(55)
+    fill(255)
+    textSize(12)
     global play, screen
     text("Click S to begin . . . ", 200, 500)
 
@@ -60,6 +62,8 @@ def draw():
         play = False
         startScreen()
         play = True
+        
+    textSize(15)
 #Camp
     if ((key == 'c')):
         screen = 1
@@ -67,57 +71,70 @@ def draw():
         boxes()
         fill(235, 237, 236)
         text("Hmm, nothing seems to be here, lets try somewhere else ...", 20, 530)
+        textSize(12)
+        text("Press 'f' to move to the next location",20, 470)
         
 # Forest & Mothman
     if ((key == 'f')):
         screen = 2
         forest.display(loc1)
-        boxes()
         moth.display(img1)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
         fill(235, 237, 236)
-        textSize(14)
+        textSize(15)
         text("""
              Key 1: Hi!
              Key 2: Do you know about the bookclub here?
              Key 3: What are you reading?
              """, 10, 500)
+        textSize(12)
+        text("Press 'l' to go the next location", 20, 470)
         
     elif key == '1' and screen == 2:
         forest.display(loc1)
-        boxes()
         moth.display(img1)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
         fill(235, 237, 236)
         text(""" Hello to yourself Jack! 
-        I hope your journey from the sage desert wasnt too bad, 
-        but welcome to my woods 
+        I hope your journey from the sage
+        desert wasnt too bad, 
+        but welcome to my woods! 
         """, 10, 120)
+        textSize(12)
+        text("Press 'f' to go back", 20, 470)
         
     elif key == '2' and screen == 2:
         forest.display(loc1)
-        boxes()
         moth.display(img1)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text(""" Oh goodie! you’ve come over to join the book club, 
-    I only joined last year but it has been really fun. 
-    I would go talk to Yeti on how to join,
-    he should be with his cousin Bigfoot somewhere 
+        text(""" Oh goodie! you've come over to join
+        the book club, I only joined last
+        year but it has been really fun.
+        I would go talk to Yeti on how to
+        join, he should be with his cousin
+        Bigfoot somewhere.
         """, 10, 120)
+        textSize(12)
+        text("Press 'f' to go back", 20, 470)
         
     elif key == '3' and screen == 2:
         forest.display(loc1)
-        boxes()
         moth.display(img1)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
         fill(235, 237, 236)
-        text(""" Oh I’m reading some classic horror stories, 
-        the Invisible Man is my favorite 
+        textSize(15)
+        text(""" Oh I'm reading some classic
+        horror stories, the Invisible Man is
+        my favorite 
         """, 10, 120)
+        textSize(12)
+        text("Press 'f' to go back", 20, 470)
         
 #Cave & BF 
     if ((key == 'v')):
@@ -127,7 +144,7 @@ def draw():
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
         fill(235, 237, 236)
-        textSize(14)
+        textSize(15)
         text("""
              Key 1: Hi!
              Key 2: Do you know where yeti is?
@@ -139,34 +156,49 @@ def draw():
         bf.display(img2)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
         text(""" Hey Jack, 
-        I hope you didn’t mind my handwriting in the letter,
-        but welcome to my humble cave!
+        I hope you didn't mind my
+        handwriting in the letter,
+        but welcome to my humble
+        cave!
         """, 10, 120)
+        textSize(12)
+        text("Press 'v' to go back", 20, 470)
+        
     elif key == '2' and screen == 3:
         cave.display(loc3)
         bf.display(img2)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text(""" Sure, Ill go get him
+        text(""" Sure, Ill go get him!
         """, 10, 120)
+        textSize(13)
+        text("(Press 'y' to talk to Yeti)", 20, 140)
+        textSize(12)
+        text("Press 'v' to go back", 20, 470)
         
     elif key == '3' and screen == 3:
         cave.display(loc3)
         bf.display(img2)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text(""" I’ve found some very interesting Histories recently,
-        who knew they could be so cool! 
+        text(""" I've found some
+        very interesting Histories
+        recently, who knew they
+        could be so cool! 
         """, 10, 120)
+        textSize(12)
+        text("Press 'v' to go back", 20, 470)
+        
+        
 # Cave & Yeti
-    if key == '2' and screen ==3:  
+    if ((key == 'y')):
         screen = 5   
         cave.display(loc3)
         yeti.display(img3)
@@ -174,99 +206,116 @@ def draw():
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
         textSize(14)
         fill(235, 237, 236)
-        textSize(14)
+        textSize(15)
         text("""
              Key 1: Hi!
              Key 2: How do I join the book club?
              Key 3: What are you reading?
-             """, 10, 500)
+             """, 20, 500)
         
     elif key == '1' and screen == 5:
         cave.display(loc3)
         yeti.display(img3)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
         text("""Hello my four-pawed friend, 
         what can I do for you?
-        """, 10, 120)
+        """, 20, 120)
+        textSize(12)
+        text("Press 'y' to go back", 20, 470)
     elif key == '2' and screen == 5:
         cave.display(loc3)
         yeti.display(img3)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text(""" Oh You’re looking to join? That’s great!
-        all you need to do is have a chat with all the other members
-        and get to know them, 
-        you have already done that? 
-        Great! Welcome to the club!
-        """, 10, 120)
+        text(""" Oh You're looking to join?
+        That's great! All you need to do
+        is have a chat with all the other
+        members and get to know them,
+        you have already done that? Great!
+        Welcome to the club!
+        """, 20, 120)
+        textSize(12)
+        text("Press 'y' to go back", 20, 470)
     elif key == '3' and screen == 5:
         cave.display(loc3)
         yeti.display(img3)
         boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
+        textSize(15)
         text("""I really enjoy sci-fi stories such as Alien,
         They are so unique 
-        """, 10, 120)
+        """, 20, 120)
         text("""Thanks for letting me join, see y'all
         next week!
-        """, 10, 160)
+        """, 20, 530)
+        textSize(12)
+        text("Press 'y' to go back", 20, 470)
         
 #Lake & Nessie      
     if ((key == 'l')):
         screen = 4
         lake.display(loc2)
-        boxes()
         nessie.display(img)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
         fill(235, 237, 236)
-        textSize(14)
+        textSize(15)
         text("""
              Key 1: Hi!
              Key 2: Do you know about the bookclub here?
              Key 3: What are you reading?
              """, 10, 500)
+        textSize(12)
+        text("Press 'v' to go the next location", 20, 470)
+
 
     elif key == '1' and screen == 4:
         lake.display(loc2)
-        boxes()
         nessie.display(img)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text(""" Hello Jackie-Jackalope, what brings you
-        to my pond?""", 10, 120)
+        text(""" Hello Jackie-Jackalope,
+        what brings you to my pond?""", 20, 120)
+        textSize(12)
+        text("Press 'l' to go back", 20, 470)
         
     elif key == '2' and screen == 4:
         lake.display(loc2)
-        boxes()
         nessie.display(img)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text("""Youre looking to join, 
-        That’s great! I hope you brought some real page-turners, 
-    to be initiated you should talk to Yeti in the cave,
-    he is the leader of the club. 
- """, 10, 120)
+        text(""" Youre looking to join, That's great!
+        I hope you brought some real
+        page-turners, to be initiated you
+        should talk to Yeti in the cave,
+        he is the leader of the club.""", 10, 120)
+        textSize(12)
+        text("Press 'l' to go back", 20, 470)
         
     elif key == '3' and screen == 4:
         lake.display(loc2)
-        boxes()
         nessie.display(img)
+        boxes()
         blend(loc,0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST)
-        textSize(14)
+        textSize(15)
         fill(235, 237, 236)
-        text("""I have a set of romance novels 
-             Im planning on introducing the 
-             group to soon, they are really sweet""", 10, 120)
-
+        text(""" I have a set of romance
+        novels Im planning on introducing
+        the group to soon, they are really   
+        sweet""", 20, 120)
+        textSize(12)
+        text("Press 'l' to go back", 20, 470)
 
 def startScreen():
             play == False
